@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { fetchContacts, addContact, deleteContact } from "./operations";
+import contactsData from '../../contactsData.json';
 
 const handlePending = state => {
     state.loading = true;
@@ -13,7 +14,7 @@ const handleRejected = (state, action) => {
 const slice = createSlice({
     name: 'contacts',
     initialState: {
-        items: [],
+        items: contactsData,
         loading: false,
         error: null,
     },
