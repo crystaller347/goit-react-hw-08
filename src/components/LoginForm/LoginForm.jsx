@@ -14,8 +14,8 @@ export const LoginForm = () => {
   const handleSubmit = (values, actions) => {
     dispatch(
       logIn({
-        email: values.email.trim,
-        password: values.password.trim,
+        email: values.email,
+        password: values.password,
       })
     )
       .unwrap()
